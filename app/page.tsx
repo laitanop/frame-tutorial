@@ -72,7 +72,7 @@ export default function Page() {
             width={500}
             height={500}
           />
-          Aiko's tale becomes a legend, and she is remembered for all time.
+          Aiko&apos;s tale becomes a legend, and she is remembered for all time.
         </div>
       </div>
     </>
