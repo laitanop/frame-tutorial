@@ -1,5 +1,6 @@
 import { getFrameMetadata } from "@coinbase/onchainkit";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 const frameMetadata = getFrameMetadata({
   buttons: [
@@ -35,32 +36,41 @@ export default function Page() {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
         <div className="overflow-hidden">
-          <img
+          <Image
             src="https://aquamarine-quickest-marmoset-831.mypinata.cloud/ipfs/QmPaXA9nd5mh4QxQoSFoLduEogKvs47yP1wfx4AincGvZn"
-            alt="Image 1"
+            width={500}
+            height={500}
+            alt="Aiko under the cherry blossoms"
             className="w-full h-auto object-cover"
           />
           Aiko under the cherry blossoms
         </div>
         <div className="overflow-hidden">
-          <img
+          <Image
             src="https://aquamarine-quickest-marmoset-831.mypinata.cloud/ipfs/Qme9KcwBbobm9kYq95QXgCzGB2xQ9rDiXPp75h42iVDXa5"
-            alt="Image 2"
+            alt="Aiko sat beneath the blossoming tree, she was swept away on a cosmic
+          journey, and she was never the same again"
+            width={500}
+            height={500}
           />
           Aiko sat beneath the blossoming tree, she was swept away on a cosmic
           journey, and she was never the same again.
         </div>
         <div className="overflow-hidden">
-          <img
+          <Image
             src="https://aquamarine-quickest-marmoset-831.mypinata.cloud/ipfs/QmcgTJdMZNukCuQQ3gz398WWtuCVuwfMPWaM4LT5NhkjRx"
-            alt="Image 3"
+            alt="Aiko back in her reality, she was a changed person, and she was"
+            width={500}
+            height={500}
           />
           Aiko back in her reality, she was a changed person, and she was.
         </div>
         <div className="overflow-hidden">
-          <img
+          <Image
             src="https://aquamarine-quickest-marmoset-831.mypinata.cloud/ipfs/QmVUXDaMvtZ2KnUCPySvReNqNjrTLxxHsKeKiriYyA4Aru"
-            alt="Image 4"
+            alt="Aiko's tale becomes a legend, and she is remembered for all time"
+            width={500}
+            height={500}
           />
           Aiko's tale becomes a legend, and she is remembered for all time.
         </div>
