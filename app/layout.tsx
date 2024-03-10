@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const viewport = {
   with: "device-width",
   initialScale: 1,

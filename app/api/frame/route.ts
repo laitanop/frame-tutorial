@@ -26,6 +26,15 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     <meta name="fc:frame:button:1" content="Next Page" />
     <meta name="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${nextId}" />
     </head>/html>`);
+  }
+  if (idAsNumber === 1) {
+    return new NextResponse(`<DOCTYPE html><html><head>
+    <title>This is a frame ${id} </title>
+    <meta name="fc:frame" content="vNext" />
+    <meta name="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/Qme9KcwBbobm9kYq95QXgCzGB2xQ9rDiXPp75h42iVDXa5" />
+    <meta name="fc:frame:button:1" content="Next Page" />
+    <meta name="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${nextId}" />
+    </head>/html>`);
   } else {
     return new NextResponse(`<DOCTYPE html><html><head>
     <title>This is a frame ${id} </title>

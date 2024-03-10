@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: "/sakura",
-        destination: "https://sakura.cloud",
+        destination: "https://frame-tutorial-wine.vercel.app",
         permanent: false,
       },
       {
