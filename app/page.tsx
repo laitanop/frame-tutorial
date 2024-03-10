@@ -7,7 +7,7 @@ const frameMetadata = getFrameMetadata({
       label: "Begin",
     },
   ],
-  image: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmXdTAoPUzLnyBmFRNimmhhLTVXXKsojDz7KxA4TxjWt6N`,
+  image: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmXdTAoPUzLnyBmFRNimmhhLTVXXKsojDz7KxA4TxjWt6N/0.webp`,
   postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
 });
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: "Sakura frame test",
 
     images: [
-      `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmXdTAoPUzLnyBmFRNimmhhLTVXXKsojDz7KxA4TxjWt6N`,
+      `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmXdTAoPUzLnyBmFRNimmhhLTVXXKsojDz7KxA4TxjWt6N/0.webp`,
     ],
   },
   other: {
