@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-async function getResponse(req: NextRequest) {
+async function getResponse(req: NextRequest): Promise<NextResponse> {
   const searchParams = req.nextUrl.searchParams;
   const id: any = searchParams.get("id");
   const idAsNumber = parseInt(id);
@@ -18,15 +18,6 @@ async function getResponse(req: NextRequest) {
     <meta name="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/end" />
     </head>/html>`);
   }
-  if (idAsNumber === 1) {
-    return new NextResponse(`<DOCTYPE html><html><head>
-    <title>This is a frame ${id} </title>
-    <meta name="fc:frame" content="vNext" />
-    <meta name="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QQmPaXA9nd5mh4QxQoSFoLduEogKvs47yP1wfx4AincGvZn" />
-    <meta name="fc:frame:button:1" content="Next Page" />
-    <meta name="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${nextId}" />
-    </head>/html>`);
-  }
   if (idAsNumber === 2) {
     return new NextResponse(`<DOCTYPE html><html><head>
     <title>This is a frame ${id} </title>
@@ -35,10 +26,18 @@ async function getResponse(req: NextRequest) {
     <meta name="fc:frame:button:1" content="Next Page" />
     <meta name="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${nextId}" />
     </head>/html>`);
+  } else {
+    return new NextResponse(`<DOCTYPE html><html><head>
+    <title>This is a frame ${id} </title>
+    <meta name="fc:frame" content="vNext" />
+    <meta name="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmPaXA9nd5mh4QxQoSFoLduEogKvs47yP1wfx4AincGvZn" />
+    <meta name="fc:frame:button:1" content="Next Page" />
+    <meta name="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${nextId}" />
+    </head>/html>`);
   }
 }
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest): Promise<Response> {
   return getResponse(req);
 }
 
